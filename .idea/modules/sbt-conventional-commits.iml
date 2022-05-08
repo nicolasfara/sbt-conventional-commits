@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="root [file:/home/nicolas/Documents/opensource-projects/sbt-conventional-commits/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
+    <output url="file://$MODULE_DIR$/../../target/scala-2.12/sbt-1.0/classes" />
+    <output-test url="file://$MODULE_DIR$/../../target/scala-2.12/sbt-1.0/test-classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.eed3si9n:gigahorse-core_2.12:0.5.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.eed3si9n:gigahorse-okhttp_2.12:0.5.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.eed3si9n:shaded-jawn-parser_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.eed3si9n:shaded-scalajson_2.12:1.0.0-M4:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.eed3si9n:sjson-new-core_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.eed3si9n:sjson-new-murmurhash_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.eed3si9n:sjson-new-scalajson_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.github.ben-manes.caffeine:caffeine:2.8.5:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.google.errorprone:error_prone_annotations:2.4.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.jcraft:jsch:0.1.54:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.lmax:disruptor:3.4.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.squareup.okhttp3:okhttp-urlconnection:3.7.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.squareup.okhttp3:okhttp:3.14.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.squareup.okio:okio:1.17.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.swoval:file-tree-views:2.1.7:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.typesafe:config:1.3.3:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: com.typesafe:ssl-config-core_2.12:0.4.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: io.get-coursier:lm-coursier-shaded_2.12:2.0.10:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: net.java.dev.jna:jna-platform:5.8.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: net.java.dev.jna:jna:5.8.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: net.openhft:zero-allocation-hashing:0.10.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.apache.logging.log4j:log4j-api:2.17.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.apache.logging.log4j:log4j-core:2.17.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.apache.logging.log4j:log4j-slf4j-impl:2.17.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.checkerframework:checker-qual:3.4.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.fusesource.jansi:jansi:2.1.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.jline:jline-builtins:3.19.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.jline:jline-reader:3.19.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.jline:jline-style:3.19.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.jline:jline-terminal-jansi:3.19.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.jline:jline-terminal-jna:3.19.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.jline:jline-terminal:3.19.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.reactivestreams:reactive-streams:1.0.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-lang.modules:scala-collection-compat_2.12:2.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-lang.modules:scala-parser-combinators_2.12:1.1.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-lang.modules:scala-xml_2.12:1.3.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-lang:scala-compiler:2.12.15:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-lang:scala-library:2.12.15:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-lang:scala-reflect:2.12.15:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt.ipcsocket:ipcsocket:1.3.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt.ivy:ivy:2.3.0-sbt-fbc4f586aeeb1591710b14eb4f41b94880dcd745:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt.jline:jline:2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:actions_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:collections_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:command_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:compiler-bridge_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:compiler-interface:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:completion_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:core-macros_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:io_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:launcher-interface:1.3.3:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:librarymanagement-core_2.12:1.6.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:librarymanagement-ivy_2.12:1.6.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:logic_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:main-settings_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:main_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:protocol_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:run_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:sbinary_2.12:0.5.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:sbt:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:scripted-plugin_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:task-system_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:tasks_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:template-resolver:0.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:test-agent:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:test-interface:1.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:testing_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:util-cache_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:util-control_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:util-interface:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:util-logging_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:util-position_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:util-relation_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:util-tracking_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-apiinfo_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-classfile_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-classpath_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-compile-core_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-compile_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-core_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-lm-integration_2.12:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-persist-core-assembly:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc-persist_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.scala-sbt:zinc_2.12:1.6.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.slf4j:slf4j-api:1.7.26:jar" level="project" />
+  </component>
+</module>
