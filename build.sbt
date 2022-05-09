@@ -9,4 +9,5 @@ lazy val root = project
     name := "sbt-conventional-commits",
     organization := "it.nicolasfarabegoli",
     sbtPlugin := true,
+    scalaVersion := "2.12.9",
   )
