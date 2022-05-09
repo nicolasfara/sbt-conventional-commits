@@ -1,8 +1,13 @@
 package it.nicolasfarabegoli
 
-import sbt._
+import sbt.{ AutoPlugin, Setting, URL }
+import sbt.Keys.baseDirectory
 
-import scala.annotation.tailrec
+import scala.io.Source
+import scala.reflect.io.{ File, Path }
+import scala.util.Using
+
+import java.io.{ File => JFile }
 
 object ConventionalCommitsPlugin extends AutoPlugin {
 
@@ -12,23 +17,34 @@ object ConventionalCommitsPlugin extends AutoPlugin {
   import autoImport._
 
   override lazy val projectSettings: Seq[Setting[_]] = Seq(
-    conventionalCommits := writeScriptToFile(),
+    conventionalCommits := conventionalCommitsTask(baseDirectory.value, fromScript.value),
   )
 
-  private def writeScriptToFile(): Unit = {
-    ???
+  private def appendToFile(file: File, children: String*): File = {
+    children.foldLeft(file)((acc, c) => (acc / Path(c)).toFile)
   }
 
-  @tailrec
-  private def getGitRoot(path: File): Option[File] = Option(path) match {
+  private def conventionalCommitsTask(baseDir: JFile, fromScript: Option[URL]): Unit = {
+    getGitRoot(baseDir).map(appendToFile(_, "hooks", "commit-msg")) match {
+      case Some(path) => writeScript(path, fromScript)
+      case None => throw new IllegalStateException("Unable to find git root")
+    }
+  }
+
+  private def writeScript(file: File, fromScript: Option[URL]): Unit = {
+    val fileContent = fromScript match {
+      case Some(url) => Using(Source.fromURL(url)) { _.mkString }.get
+      case None => Source.fromResource("commit-msg.sh").mkString
+    }
+    file.writeAll(fileContent)
+  }
+
+  private def getGitRoot(path: JFile): Option[File] = Option(path) match {
     case Some(currentFolder) =>
-      val maybeGitRoot = currentFolder.listFiles().collectFirst {
-        case currentFile if currentFile.name == ".git" => currentFile
+      val maybeGitRoot = currentFolder.listFiles.collectFirst {
+        case file if file.getName == ".git" => file
       }
-      maybeGitRoot match {
-        case g @ Some(_) => g
-        case _ => getGitRoot(path.getParentFile)
-      }
+      maybeGitRoot map (File(_)) orElse getGitRoot(path.getParentFile)
     case _ => None
   }
 }
