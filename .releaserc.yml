@@ -9,7 +9,7 @@ plugins:
         - files:
             - build.sbt
           from: 'version := .*'
-          to: 'version := ${nextRelease.version}'
+          to: 'version := ${nextRelease.version},'
           results:
             - file: build.sbt
               hasChanged: true
