@@ -1,0 +1,28 @@
+tagFormat: '${version}'
+plugins:
+  - - '@semantic-release/commit-analyzer'
+    - preset: conventionalcommits
+  - '@semantic-release/release-notes-generator'
+  - '@semantic-release/changelog'
+  - - '@google/semantic-release-replace-plugin'
+    - replacements:
+        - files:
+            - build.sbt
+          from: 'version := .*'
+          to: 'version := ${nextRelease.version}'
+          results:
+            - file: build.sbt
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+          countMatches: true
+  - - '@semantic-release/exec'
+    - publishCmd: >
+        git tag -a -f ${nextRelease.version} ${nextRelease.version} -F CHANGELOG.md
+        git push --force origin ${nextRelease.version}
+        sbt ci-release || exit 1
+  - - '@semantic-release/git'
+    - assets:
+        - gradle.properties
+        - CHANGELOG.md
+  - '@semantic-release/github'
