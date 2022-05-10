@@ -18,10 +18,10 @@ plugins:
           countMatches: true
   - - '@semantic-release/exec'
     - publishCmd: |
-        git tag -a -f ${nextRelease.version} ${nextRelease.version} -F CHANGELOG.md        
-        git push --force origin ${nextRelease.version}        
-        sbt +publishSigned || exit 1
+        sbt ci-release || exit 1
         sbt sonatypeBundleRelease || exit 2
+        git tag -a -f ${nextRelease.version} ${nextRelease.version} -F CHANGELOG.md        
+        git push --force origin ${nextRelease.version}
   - - '@semantic-release/git'
     - assets:
         - build.sbt
