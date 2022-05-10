@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.0...1.0.1) (2022-05-10)
+
+
+### Bug Fixes
+
+* fix yaml multi line string ([c7e726d](https://github.com/nicolasfara/sbt-conventional-commits/commit/c7e726d4b34aafb0adccf64dd5c26e13bf778b71))
+
 # 1.0.0 (2022-05-10)
 
 
