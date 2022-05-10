@@ -23,6 +23,6 @@ plugins:
         sbt ci-release || exit 1
   - - '@semantic-release/git'
     - assets:
-        - gradle.properties
+        - build.sbt
         - CHANGELOG.md
   - '@semantic-release/github'
