@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.2...1.0.3) (2022-05-10)
+
+
+### Bug Fixes
+
+* reorder publish steps ([435311f](https://github.com/nicolasfara/sbt-conventional-commits/commit/435311fe23f2c5ccfed9491ef840750838021fa0))
+
 ## [1.0.2](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.1...1.0.2) (2022-05-10)
 
 
