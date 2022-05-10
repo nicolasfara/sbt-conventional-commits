@@ -1,13 +1,12 @@
 package it.nicolasfarabegoli
 
-import sbt.{ AutoPlugin, Setting, URL }
+import sbt.{AutoPlugin, Setting, URL}
 import sbt.Keys.baseDirectory
 
 import scala.io.Source
-import scala.reflect.io.{ File, Path }
-import scala.util.Using
-
-import java.io.{ File => JFile }
+import scala.reflect.io.{File, Path}
+import scala.util.{Try, Using}
+import java.io.{FileNotFoundException, File as JFile}
 
 object ConventionalCommitsPlugin extends AutoPlugin {
 
@@ -34,7 +33,7 @@ object ConventionalCommitsPlugin extends AutoPlugin {
   private def writeScript(file: File, fromScript: Option[URL]): Unit = {
     val fileContent = fromScript match {
       case Some(url) => Using(Source.fromURL(url)) { _.mkString }.get
-      case None => Source.fromResource("commit-msg.sh").mkString
+      case None => Using(Source.fromInputStream(getClass.getResourceAsStream("/commit-msg.sh"))) { _.mkString }.get
     }
     file.writeAll(fileContent)
   }
