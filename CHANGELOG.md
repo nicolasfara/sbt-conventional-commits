@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.1...1.0.2) (2022-05-10)
+
+
+### Bug Fixes
+
+* fix automatic release on sonatype ([12f8ad5](https://github.com/nicolasfara/sbt-conventional-commits/commit/12f8ad528599f08bfdda432010410506346b1cff))
+
 ## [1.0.1](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.0...1.0.1) (2022-05-10)
 
 
