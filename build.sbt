@@ -5,6 +5,7 @@ ThisBuild / scalafixDependencies ++= Seq(
 ThisBuild / homepage := Some(url("https://github.com/nicolasfara/sbt-conventional-commits"))
 ThisBuild / organization := "it.nicolasfarabegoli"
 ThisBuild / licenses := List("MIT" -> url("https://opensource.org/licenses/MIT"))
+ThisBuild / versionScheme := Some("semver-spec")
 
 ThisBuild / developers := List(
   Developer(
