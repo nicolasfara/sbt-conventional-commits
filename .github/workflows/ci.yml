@@ -52,7 +52,7 @@ jobs:
         run: sbt scalafmtCheckAll
 
       - name: Check with scalafix
-        run: sbt scalafixAll --check
+        run: sbt 'scalafixAll --check'
 
       - name: Test
         run: sbt test
