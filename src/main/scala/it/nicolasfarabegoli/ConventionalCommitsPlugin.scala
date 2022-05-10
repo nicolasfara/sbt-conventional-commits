@@ -1,12 +1,13 @@
 package it.nicolasfarabegoli
 
-import sbt.{AutoPlugin, Setting, URL}
-import sbt.Keys.baseDirectory
+import java.io.{ File => JFile }
 
 import scala.io.Source
-import scala.reflect.io.{File, Path}
-import scala.util.{Try, Using}
-import java.io.{FileNotFoundException, File as JFile}
+import scala.reflect.io.{ File, Path }
+import scala.util.Using
+
+import sbt.Keys.baseDirectory
+import sbt.{ AutoPlugin, Setting, URL }
 
 object ConventionalCommitsPlugin extends AutoPlugin {
 
