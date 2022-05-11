@@ -16,6 +16,10 @@ ThisBuild / developers := List(
   ),
 )
 
+lazy val startupTransition: State => State = { s: State =>
+  "conventionalCommits" :: s
+}
+
 lazy val root = project
   .in(file("."))
   .enablePlugins(SbtPlugin)
@@ -23,6 +27,7 @@ lazy val root = project
     name := "sbt-conventional-commits",
     version := "1.0.3",
     sbtPlugin := true,
+    publishTo := sonatypePublishToBundle.value,
     sonatypeCredentialHost := "s01.oss.sonatype.org",
     sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
     scriptedLaunchOpts := {
@@ -33,4 +38,11 @@ lazy val root = project
     semanticdbEnabled := true,
     semanticdbVersion := scalafixSemanticdb.revision,
     scalacOptions += "-Ywarn-unused-import",
+    libraryDependencies ++= Seq(
+      "com.github.pathikrit" %% "better-files" % "3.9.1",
+    ),
+    Global / onLoad := {
+      val old = (Global / onLoad).value
+      startupTransition compose old
+    },
   )
