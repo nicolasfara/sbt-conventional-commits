@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.3...1.0.4) (2022-05-11)
+
+
+### Bug Fixes
+
+* set script executable ([81cf74b](https://github.com/nicolasfara/sbt-conventional-commits/commit/81cf74b460cd54dc65548b1799b9c88e248989c1))
+
 ## [1.0.3](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.2...1.0.3) (2022-05-10)
 
 
