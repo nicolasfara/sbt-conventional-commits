@@ -1,22 +1,20 @@
 package it.nicolasfarabegoli
 
 import java.io.{ File => JFile }
+import java.nio.file.attribute.PosixFilePermission
 
 import scala.io.Source
-import scala.reflect.io.{ File, Path }
 import scala.util.Using
 
+import better.files.Dsl._
+import better.files._
 import sbt.URL
 
 object ConventionalCommits {
   def apply(baseDir: JFile, fromScript: Option[URL]): Unit = conventionalCommitsTask(baseDir, fromScript)
 
-  private def appendToFile(file: File, children: String*): File = {
-    children.foldLeft(file)((acc, c) => (acc / Path(c)).toFile)
-  }
-
   private def conventionalCommitsTask(baseDir: JFile, fromScript: Option[URL]): Unit = {
-    getGitRoot(baseDir).map(appendToFile(_, "hooks", "commit-msg")) match {
+    getGitRoot(baseDir.toScala).map(_ / "hooks" / "commit-msg") match {
       case Some(path) => writeScript(path, fromScript)
       case None => throw new IllegalStateException("Unable to find git root")
     }
@@ -27,15 +25,16 @@ object ConventionalCommits {
       case Some(url) => Using(Source.fromURL(url)) { _.mkString }.get
       case None => Using(Source.fromInputStream(getClass.getResourceAsStream("/commit-msg.sh"))) { _.mkString }.get
     }
-    file.writeAll(fileContent)
+    file < fileContent
+    chmod_+(PosixFilePermission.OWNER_EXECUTE, file)
   }
 
-  private def getGitRoot(path: JFile): Option[File] = Option(path) match {
+  private def getGitRoot(path: File): Option[File] = Option(path) match {
     case Some(currentFolder) =>
-      val maybeGitRoot = currentFolder.listFiles.collectFirst {
-        case file if file.getName == ".git" => file
+      val maybeGitRoot = ls(currentFolder).collectFirst {
+        case file if file.name == ".git" => file
       }
-      maybeGitRoot map (File(_)) orElse getGitRoot(path.getParentFile)
+      maybeGitRoot orElse getGitRoot(path.parent)
     case _ => None
   }
 }
