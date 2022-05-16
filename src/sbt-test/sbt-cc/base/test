@@ -1,3 +1,4 @@
 $ mkdir .git/hooks
 > conventionalCommits
 $ exists .git/hooks/commit-msg
+$ exec ./test.sh
