@@ -8,23 +8,20 @@ import scala.util.Using
 
 import better.files.Dsl._
 import better.files._
-import sbt.URL
 
 object ConventionalCommits {
-  def apply(baseDir: JFile, fromScript: Option[URL]): Unit = conventionalCommitsTask(baseDir, fromScript)
+  def apply(baseDir: JFile): Unit = conventionalCommitsTask(baseDir)
 
-  private def conventionalCommitsTask(baseDir: JFile, fromScript: Option[URL]): Unit = {
+  private def conventionalCommitsTask(baseDir: JFile): Unit = {
     getGitRoot(baseDir.toScala).map(_ / "hooks" / "commit-msg") match {
-      case Some(path) => writeScript(path, fromScript)
+      case Some(path) => writeScript(path)
       case None => throw new IllegalStateException("Unable to find git root")
     }
   }
 
-  private def writeScript(file: File, fromScript: Option[URL]): Unit = {
-    val fileContent = fromScript match {
-      case Some(url) => Using(Source.fromURL(url)) { _.mkString }.get
-      case None => Using(Source.fromInputStream(getClass.getResourceAsStream("/commit-msg.sh"))) { _.mkString }.get
-    }
+  private def writeScript(file: File): Unit = {
+    val fileContent =
+      Using(Source.fromInputStream(getClass.getResourceAsStream("/commit-msg.sh"))) { _.mkString }.get
     file < fileContent
     chmod_+(PosixFilePermission.OWNER_EXECUTE, file)
   }
