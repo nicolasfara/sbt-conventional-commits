@@ -1,3 +1,5 @@
+# [2.0.0](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.4...2.0.0) (2022-05-23)
+
 ## [1.0.4](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.3...1.0.4) (2022-05-11)
 
 
