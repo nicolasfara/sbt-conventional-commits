@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.0.0...2.0.1) (2022-05-28)
+
+
+### Bug Fixes
+
+* set execute permission in os agnostic way ([1b1eb22](https://github.com/nicolasfara/sbt-conventional-commits/commit/1b1eb22e2a20dbc19eef001e3ccaec85e4cfac05))
+
 # [2.0.0](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.4...2.0.0) (2022-05-23)
 
 ## [1.0.4](https://github.com/nicolasfara/sbt-conventional-commits/compare/1.0.3...1.0.4) (2022-05-11)
