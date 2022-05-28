@@ -1,7 +1,6 @@
 package it.nicolasfarabegoli
 
 import java.io.{ File => JFile }
-import java.nio.file.attribute.PosixFilePermission
 
 import scala.io.Source
 import scala.util.Using
@@ -23,7 +22,7 @@ object ConventionalCommits {
     val fileContent =
       Using(Source.fromInputStream(getClass.getResourceAsStream("/commit-msg.sh"))) { _.mkString }.get
     file < fileContent
-    chmod_+(PosixFilePermission.OWNER_EXECUTE, file)
+    file.toJava.setExecutable(true)
   }
 
   private def getGitRoot(path: File): Option[File] = Option(path) match {
