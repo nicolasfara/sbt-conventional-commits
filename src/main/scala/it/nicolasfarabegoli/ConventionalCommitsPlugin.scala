@@ -11,6 +11,24 @@ object ConventionalCommitsPlugin extends AutoPlugin {
   import autoImport._
 
   override lazy val buildSettings: Seq[Setting[_]] = Seq(
-    conventionalCommits := ConventionalCommits(baseDirectory.value),
+    conventionalCommits / types := Seq(
+      "build",
+      "chore",
+      "ci",
+      "docs",
+      "feat",
+      "fix",
+      "perf",
+      "refactor",
+      "revert",
+      "style",
+      "test",
+    ),
+    conventionalCommits / scopes := Seq(),
+    conventionalCommits := ConventionalCommits(
+      baseDirectory.value,
+      (conventionalCommits / types).value,
+      (conventionalCommits / scopes).value,
+    ),
   )
 }
