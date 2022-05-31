@@ -4,4 +4,6 @@ import sbt._
 
 trait ConventionalCommitsKeys {
   val conventionalCommits = taskKey[Unit]("Task for creating a git hook for enforcing conventional commits")
+  val scopes = settingKey[Seq[String]]("A list of valid scopes (defaults to any)")
+  val types = settingKey[Seq[String]]("A list of valid commit types")
 }

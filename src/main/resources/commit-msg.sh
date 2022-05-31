@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Create a regex for a conventional commit.
-conventional_commit_regex="^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z \-]+\))?!?: .+$"
+conventional_commit_regex="^(%s)(\(%s\))?!?: .+$"
 
 # Get the commit message (the parameter we're given is just the path to the
 # temporary file which holds the message).

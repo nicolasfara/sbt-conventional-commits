@@ -9,19 +9,24 @@ import better.files.Dsl._
 import better.files._
 
 object ConventionalCommits {
-  def apply(baseDir: JFile): Unit = conventionalCommitsTask(baseDir)
 
-  private def conventionalCommitsTask(baseDir: JFile): Unit = {
+  def apply(baseDir: JFile, types: Seq[String], scopes: Seq[String]): Unit =
+    conventionalCommitsTask(baseDir, types, scopes)
+
+  private def conventionalCommitsTask(baseDir: JFile, types: Seq[String], scopes: Seq[String]): Unit = {
     getGitRoot(baseDir.toScala).map(_ / "hooks" / "commit-msg") match {
-      case Some(path) => writeScript(path)
+      case Some(path) => writeScript(path, types, scopes)
       case None => throw new IllegalStateException("Unable to find git root")
     }
   }
 
-  private def writeScript(file: File): Unit = {
+  private def writeScript(file: File, types: Seq[String], scopes: Seq[String]): Unit = {
     val fileContent =
       Using(Source.fromInputStream(getClass.getResourceAsStream("/commit-msg.sh"))) { _.mkString }.get
-    file < fileContent
+    val typesRegex = types.mkString("|")
+    val scopesRegex = if (scopes.isEmpty) "[a-z \\-]+" else scopes.mkString("|")
+    val processedContent = fileContent.format(typesRegex, scopesRegex)
+    file < processedContent
     file.toJava.setExecutable(true)
   }
 
