@@ -42,3 +42,18 @@ More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary
 > git commit -m "feat: we love conventional commit!"
 Conventional Commit standards...
 ```
+
+You can configure the available types for your commits by setting the `ThisBuild / conventionalCommits / types` key.
+The default commit types are `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, and `test`. 
+```scala
+ThisBuild / conventionalCommits / types := Seq("feat", "fix") // Allow only feat and fix commits
+ThisBuild / conventionalCommits / types ++= Seq("some", "other") // Allow "some" and "other" in addition to the default types
+```
+
+In the same way, you can restrict the available scopes by setting the `ThisBuild / conventionalCommits / scopes` key.
+By default, all scopes are allowed.
+
+```scala
+ThisBuild / conventionalCommits / scopes := Seq() // Allow all scopes
+ThisBuild / conventionalCommits / scopes := Seq("scope1", "scope2") // Allow only scope1 and scope2
+```
