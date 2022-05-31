@@ -10,10 +10,7 @@ object ConventionalCommitsPlugin extends AutoPlugin {
   object autoImport extends ConventionalCommitsKeys
   import autoImport._
 
-  override lazy val globalSettings: Seq[Setting[_]] = Seq(
-  )
-
-  override lazy val projectSettings: Seq[Setting[_]] = Seq(
+  override lazy val buildSettings: Seq[Setting[_]] = Seq(
     conventionalCommits := ConventionalCommits(baseDirectory.value),
   )
 }
