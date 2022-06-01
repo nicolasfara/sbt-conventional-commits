@@ -6,4 +6,6 @@ trait ConventionalCommitsKeys {
   val conventionalCommits = taskKey[Unit]("Task for creating a git hook for enforcing conventional commits")
   val scopes = settingKey[Seq[String]]("A list of valid scopes (defaults to any)")
   val types = settingKey[Seq[String]]("A list of valid commit types")
+  val successMessage = settingKey[Option[String]]("The message (if any) to show when a commit is valid")
+  val failureMessage = settingKey[Option[String]]("The message (if any) to show when a commit is not valid")
 }
