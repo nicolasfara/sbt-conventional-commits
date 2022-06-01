@@ -60,3 +60,10 @@ ThisBuild / conventionalCommits / scopes := Seq("scope1", "scope2") // Allow onl
 
 You can also configure the success and failure messages displayed when committing, respectively by changing the
 `ThisBuild / conventionalCommits / successMessage` and `ThisBuild / conventionalCommits / failureMessage` keys.
+
+You can freely use color codes and newlines in the provided message.
+
+```scala
+ThisBuild / conventionalCommits / successMessage = None // Won't display a success message
+ThisBuild / conventionalCommits / successMessage = Some("\\e[32mCongratulations!\\e[0m") // Shows "Congratulations" in green
+```
