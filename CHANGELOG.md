@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.0.1...2.1.0) (2022-06-01)
+
+
+### Bug Fixes
+
+* move task to buildSettings ([c7a902e](https://github.com/nicolasfara/sbt-conventional-commits/commit/c7a902e61b292a72c0a5f42ede7fe61d8c0ae20c))
+
+
+### Features
+
+* add customizable commit types and scopes ([f13ab5e](https://github.com/nicolasfara/sbt-conventional-commits/commit/f13ab5e4275e69d98da312a1b707019b673541ae)), closes [#13](https://github.com/nicolasfara/sbt-conventional-commits/issues/13)
+
 ## [2.0.1](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.0.0...2.0.1) (2022-05-28)
 
 
