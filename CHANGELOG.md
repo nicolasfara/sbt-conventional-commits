@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.1.0...2.2.0) (2022-06-01)
+
+
+### Features
+
+* add settings to configure messages ([d8a651a](https://github.com/nicolasfara/sbt-conventional-commits/commit/d8a651afb97c6db7aed7239317afec16f225a89b))
+* make script generation in Scala ([a8a3238](https://github.com/nicolasfara/sbt-conventional-commits/commit/a8a3238d22733c1d575d047c413c8e8ef693f351))
+
 # [2.1.0](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.0.1...2.1.0) (2022-06-01)
 
 
