@@ -10,6 +10,16 @@ object ConventionalCommitsPlugin extends AutoPlugin {
   object autoImport extends ConventionalCommitsKeys
   import autoImport._
 
+  val defaultSuccessMessage: String = "\\e[32mCommit message meets Conventional Commit standards...\\e[0m"
+
+  val defaultFailureMessage: String =
+    """
+      |\e[31mThe commit message does not meet the Conventional Commit standard\e[0m
+      |An example of a valid message is: 
+      |  feat(login): add the 'remember me' button
+      |More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary
+      |""".stripMargin
+
   override lazy val buildSettings: Seq[Setting[_]] = Seq(
     conventionalCommits / types := Seq(
       "build",
@@ -25,10 +35,14 @@ object ConventionalCommitsPlugin extends AutoPlugin {
       "test",
     ),
     conventionalCommits / scopes := Seq(),
+    conventionalCommits / successMessage := Some(defaultSuccessMessage),
+    conventionalCommits / failureMessage := Some(defaultFailureMessage),
     conventionalCommits := ConventionalCommits(
       baseDirectory.value,
       (conventionalCommits / types).value,
       (conventionalCommits / scopes).value,
+      (conventionalCommits / successMessage).value,
+      (conventionalCommits / failureMessage).value,
     ),
   )
 }
