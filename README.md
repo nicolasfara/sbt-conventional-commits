@@ -57,3 +57,6 @@ By default, all scopes are allowed.
 ThisBuild / conventionalCommits / scopes := Seq() // Allow all scopes
 ThisBuild / conventionalCommits / scopes := Seq("scope1", "scope2") // Allow only scope1 and scope2
 ```
+
+You can also configure the success and failure messages displayed when committing, respectively by changing the
+`ThisBuild / conventionalCommits / successMessage` and `ThisBuild / conventionalCommits / failureMessage` keys.
