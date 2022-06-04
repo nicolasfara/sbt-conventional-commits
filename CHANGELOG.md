@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.2.0...2.2.1) (2022-06-04)
+
+
+### Bug Fixes
+
+* fix missing escapes and unwanted newlines ([7b97e38](https://github.com/nicolasfara/sbt-conventional-commits/commit/7b97e381b5cd9a4c406fae6450cebebb2d2ef13c))
+
 # [2.2.0](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.1.0...2.2.0) (2022-06-01)
 
 
