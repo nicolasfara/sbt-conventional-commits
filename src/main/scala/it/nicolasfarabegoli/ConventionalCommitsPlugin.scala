@@ -18,7 +18,7 @@ object ConventionalCommitsPlugin extends AutoPlugin {
       |An example of a valid message is: 
       |  feat(login): add the 'remember me' button
       |More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary
-      |""".stripMargin
+      |""".stripMargin.strip
 
   override lazy val buildSettings: Seq[Setting[_]] = Seq(
     conventionalCommits / types := Seq(

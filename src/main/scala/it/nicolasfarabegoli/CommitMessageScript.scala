@@ -31,8 +31,10 @@ object CommitMessageScript {
       |# Uh-oh, this is not a conventional commit, show an example and link to the spec.
       |$failureMessageEcho
       |exit 1
-      |""".stripMargin
+      |""".stripMargin.stripLeading
   }
 
-  private def wrapInEcho(str: Option[String]): String = str map { s => s"echo -e '$s'" } getOrElse ""
+  private def wrapInEcho(str: Option[String]): String = str map { s => s"echo -e '${escape(s)}'" } getOrElse ""
+
+  private def escape(str: String): String = str.replace("\r", "").replace("\n", "\\n").replace("'", "\\'")
 }
