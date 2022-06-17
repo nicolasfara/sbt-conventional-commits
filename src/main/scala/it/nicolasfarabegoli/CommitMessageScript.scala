@@ -34,7 +34,15 @@ object CommitMessageScript {
       |""".stripMargin.stripLeading
   }
 
-  private def wrapInEcho(str: Option[String]): String = str map { s => s"echo -e '${escape(s)}'" } getOrElse ""
+  private def wrapInEcho(str: Option[String]): String = str map { s => s"echo -e '${sanitize(s)}'" } getOrElse ""
 
-  private def escape(str: String): String = str.replace("\r", "").replace("\n", "\\n").replace("'", "\\'")
+  private def sanitize(str: String): String = {
+    val charsToEscape = Seq('\'')
+    val escaped = escapeNewlines(str)
+    escapeChars(escaped, charsToEscape)
+  }
+
+  private def escapeNewlines(str: String): String = str.replace("\r", "").replace("\n", "\\n")
+  private def escapeChar(str: String, c: Char): String = str.replace(c.toString, f"\\x${c.toInt}%x")
+  private def escapeChars(str: String, cs: Seq[Char]): String = cs.foldLeft(str)(escapeChar)
 }
