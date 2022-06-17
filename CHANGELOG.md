@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.2.1...2.2.2) (2022-06-17)
+
+
+### Bug Fixes
+
+* use correct escape sequence for single quotes ([#30](https://github.com/nicolasfara/sbt-conventional-commits/issues/30)) ([d461c0a](https://github.com/nicolasfara/sbt-conventional-commits/commit/d461c0a54930a54e7d4fa2d807d5e60df7901b3b))
+
 ## [2.2.1](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.2.0...2.2.1) (2022-06-04)
 
 
