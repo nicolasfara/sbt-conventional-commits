@@ -1,6 +1,7 @@
 package it.nicolasfarabegoli
 
 import java.io.{ File => JFile }
+
 import better.files.Dsl._
 import better.files._
 import sbt.internal.util.ManagedLogger
