@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.2.2...2.3.0) (2022-06-19)
+
+
+### Features
+
+* enable warning if no git root is found ([593d5a7](https://github.com/nicolasfara/sbt-conventional-commits/commit/593d5a763c87618160d37b47e99df2163e86ffc6))
+
 ## [2.2.2](https://github.com/nicolasfara/sbt-conventional-commits/compare/2.2.1...2.2.2) (2022-06-17)
 
 
