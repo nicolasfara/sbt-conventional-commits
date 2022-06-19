@@ -1,23 +1,16 @@
 package it.nicolasfarabegoli
 
 import java.io.{ File => JFile }
-
 import better.files.Dsl._
 import better.files._
+import sbt.internal.util.ManagedLogger
 
 object ConventionalCommits {
 
   def apply(
+      logger: ManagedLogger,
       baseDir: JFile,
-      types: Seq[String],
-      scopes: Seq[String],
-      successMessage: Option[String],
-      failureMessage: Option[String],
-  ): Unit =
-    conventionalCommitsTask(baseDir, types, scopes, successMessage, failureMessage)
-
-  private def conventionalCommitsTask(
-      baseDir: JFile,
+      warningIfNoGitRoot: Boolean,
       types: Seq[String],
       scopes: Seq[String],
       successMessage: Option[String],
@@ -25,7 +18,7 @@ object ConventionalCommits {
   ): Unit = {
     getGitRoot(baseDir.toScala).map(_ / "hooks" / "commit-msg") match {
       case Some(path) => writeScript(path, types, scopes, successMessage, failureMessage)
-      case None => throw new IllegalStateException("Unable to find git root")
+      case None => if (warningIfNoGitRoot) logger.warn("No '.git' root found. Script not generated")
     }
   }
 

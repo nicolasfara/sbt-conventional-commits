@@ -1,6 +1,6 @@
 package it.nicolasfarabegoli
 
-import sbt.Keys.baseDirectory
+import sbt.Keys.{ baseDirectory, streams }
 import sbt.{ AutoPlugin, Setting }
 
 object ConventionalCommitsPlugin extends AutoPlugin {
@@ -21,6 +21,7 @@ object ConventionalCommitsPlugin extends AutoPlugin {
       |""".stripMargin.strip
 
   override lazy val buildSettings: Seq[Setting[_]] = Seq(
+    conventionalCommits / warningIfNoGitRoot := true,
     conventionalCommits / types := Seq(
       "build",
       "chore",
@@ -38,7 +39,9 @@ object ConventionalCommitsPlugin extends AutoPlugin {
     conventionalCommits / successMessage := Some(defaultSuccessMessage),
     conventionalCommits / failureMessage := Some(defaultFailureMessage),
     conventionalCommits := ConventionalCommits(
+      streams.value.log,
       baseDirectory.value,
+      (conventionalCommits / warningIfNoGitRoot).value,
       (conventionalCommits / types).value,
       (conventionalCommits / scopes).value,
       (conventionalCommits / successMessage).value,
