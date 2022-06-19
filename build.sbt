@@ -25,7 +25,7 @@ lazy val root = project
   .enablePlugins(SbtPlugin)
   .settings(
     name := "sbt-conventional-commits",
-    version := "2.2.2",
+    version := "2.3.0-SNAPSHOT",
     sbtPlugin := true,
     publishTo := sonatypePublishToBundle.value,
     sonatypeCredentialHost := "s01.oss.sonatype.org",
