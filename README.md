@@ -67,3 +67,13 @@ You can freely use color codes and newlines in the provided message.
 ThisBuild / conventionalCommits / successMessage = None // Won't display a success message
 ThisBuild / conventionalCommits / successMessage = Some("\\e[32mCongratulations!\\e[0m") // Shows "Congratulations" in green
 ```
+
+## Settings keys
+
+| Key                  | Description                                                                                                | Default                                                                                      |
+|----------------------|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| `warningIfNoGitRoot` | A **warning** is raised if no `.git` root is found walking up until the `/` from the project folder.       | `true`                                                                                       |
+| `types`              | List of admitted types in the commit message.                                                              | `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test` |
+| `scopes`             | List of admitted scopes in the commit message. An empty list means that all scopes are admitted            | `emptyList`                                                                                  |
+| `successMessage`     | A message printed if the commit meets conventional commit. If `null` is set, no message is printed.        | "Commit message meets Conventional Commit standards..."                                      |
+| `failureMessage`     | A message printed if the commit **not** meets conventional commit. If `null` is set no message is printed. | "The commit message does not meet the Conventional Commit standard"                          |
