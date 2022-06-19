@@ -16,6 +16,16 @@ plugins:
               numMatches: 1
               numReplacements: 1
           countMatches: true
+        - files:
+            - README.md
+          from: 'addSbtPlugin.*'
+          to: 'addSbtPlugin("it.nicolasfarabegoli" % "sbt-conventional-commits" % "${nextRelease.version}")'
+          results:
+            - file: README.md
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+          countMatches: true
   - - '@semantic-release/exec'
     - publishCmd: |
         sbt +publishSigned || exit 1
