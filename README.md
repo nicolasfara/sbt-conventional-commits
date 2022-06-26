@@ -1,6 +1,7 @@
 # sbt-conventional-commit
 [![Build test and deploy](https://github.com/nicolasfara/sbt-conventional-commits/actions/workflows/ci.yml/badge.svg)](https://github.com/nicolasfara/sbt-conventional-commits/actions/workflows/ci.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/it.nicolasfarabegoli/sbt-conventional-commits/badge.svg)](https://maven-badges.herokuapp.com/maven-central/it.nicolasfarabegoli/sbt-conventional-commits/)
+[![semantic-release: conventional-commits](https://img.shields.io/badge/semantic--release-conventional_commits-e10098?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The purpose of this plugin is to enforce the use of [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) in an sbt-based Scala project.
