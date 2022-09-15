@@ -1,5 +1,5 @@
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.6")
-addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.10.1")
+addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.10.2")
 addSbtPlugin("io.shiftleft" % "sbt-ci-release-early" % "2.0.32")
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "1.2.0")
 addSbtPlugin("it.nicolasfarabegoli" % "sbt-conventional-commits" % "2.3.0")
