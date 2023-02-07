@@ -39,7 +39,7 @@ lazy val root = project
     semanticdbVersion := scalafixSemanticdb.revision,
     scalacOptions += "-Ywarn-unused-import",
     libraryDependencies ++= Seq(
-      "com.github.pathikrit" %% "better-files" % "3.9.1",
+      "com.github.pathikrit" %% "better-files" % "3.9.2",
     ),
     Global / onLoad := {
       val old = (Global / onLoad).value
