@@ -8,6 +8,6 @@
     "@google/semantic-release-replace-plugin": "1.2.0"
   },
   "engines": {
-    "node": "18.15"
+    "node": "18.16"
   }
 }
