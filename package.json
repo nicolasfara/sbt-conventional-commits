@@ -5,7 +5,7 @@
     "@semantic-release/git": "10.0.1",
     "conventional-changelog-conventionalcommits": "6.1.0",
     "gradle-semantic-release-plugin": "1.7.6",
-    "@google/semantic-release-replace-plugin": "1.2.0"
+    "@google/semantic-release-replace-plugin": "1.2.1"
   },
   "engines": {
     "node": "18.16"
