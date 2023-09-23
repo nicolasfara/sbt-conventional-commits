@@ -67,7 +67,7 @@ jobs:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     steps:
       - name: Fetch sources
-        uses: actions/checkout@v4.0.0
+        uses: actions/checkout@v4.1.0
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
 
