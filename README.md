@@ -20,10 +20,7 @@ lazy val root = project
   .in(file("."))
   .settings(
     // Other settings...
-    Global / onLoad := {
-      val old = (Global / onLoad).value
-      startupTransition compose old
-    }
+    Global / onLoad ~= (_ andThen ("conventionalCommits" :: _))
   )
 ```
 
