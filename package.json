@@ -8,6 +8,6 @@
     "semantic-release-replace-plugin": "1.2.7"
   },
   "engines": {
-    "node": "22.13"
+    "node": "22.14"
   }
 }
