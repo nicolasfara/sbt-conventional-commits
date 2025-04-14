@@ -77,7 +77,7 @@ jobs:
           java-version: "adopt@1.11"
 
       - name: Install Node
-        uses: actions/setup-node@v4.3.0
+        uses: actions/setup-node@v4.4.0
         with:
           node-version-file: package.json
 
