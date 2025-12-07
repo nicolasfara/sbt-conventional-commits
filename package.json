@@ -4,7 +4,7 @@
     "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "10.0.1",
     "conventional-changelog-conventionalcommits": "9.1.0",
-    "gradle-semantic-release-plugin": "1.10.2",
+    "gradle-semantic-release-plugin": "1.10.3",
     "semantic-release-replace-plugin": "1.2.7"
   },
   "engines": {
